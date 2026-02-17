@@ -1,5 +1,6 @@
 <?php
 
+use App\Console\GitHooks\TestingPreCommitHook;
 use Igorsgm\GitHooks\Console\Commands\Hooks\LarastanPreCommitHook;
 use Igorsgm\GitHooks\Console\Commands\Hooks\PintPreCommitHook;
 
@@ -23,6 +24,7 @@ return [
     'pre-commit' => [
         PintPreCommitHook::class,
         LarastanPreCommitHook::class,
+        TestingPreCommitHook::class,
     ],
 
     /*
