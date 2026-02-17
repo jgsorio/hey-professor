@@ -26,7 +26,7 @@ class TestingPreCommitHook implements PreCommitHook
      */
     public function handle(ChangedFiles $files, Closure $next)
     {
-        $process = new Process(['./vendor/bin/phpunit']);
+        $process = new Process(['./vendor/bin/pest']);
         $process->run();
 
         if (! $process->isSuccessful()) {
