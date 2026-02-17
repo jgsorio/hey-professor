@@ -1,5 +1,6 @@
 <?php
 
+use Igorsgm\GitHooks\Console\Commands\Hooks\LarastanPreCommitHook;
 use Igorsgm\GitHooks\Console\Commands\Hooks\PintPreCommitHook;
 
 return [
@@ -21,6 +22,7 @@ return [
     */
     'pre-commit' => [
         PintPreCommitHook::class,
+        LarastanPreCommitHook::class,
     ],
 
     /*
